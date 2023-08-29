@@ -41,7 +41,7 @@ export default async function Page({ params }) {
             </nav>
             <div className="card">
                 <h3>{ticket.title}</h3>
-                <small>Created by {ticket.user_email}.</small>
+                {ticket.user_email && <small>Created by {ticket.user_email}.</small>}
                 <p>{ticket.body}</p>
                 <div className={`pill ${ticket.priority}`}>
                     {ticket.priority} priority
